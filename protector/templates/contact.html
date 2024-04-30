@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Medipro CSS -->
+<link rel="stylesheet" href="{% static 'addition/css/normalize.css' %}">
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+	<div class="container">
+		<div class="bread-inner">
+			<div class="row">
+				<div class="col-12">
+					<h2>Contact Us</h2>
+					<ul class="bread-list">
+						<li><a href="{% url 'protector:index' %}">Home</a></li>
+						<li><i class="icofont-simple-right"></i></li>
+						<li class="active">Contact Us</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Contact Us -->
+<section class="contact-us section">
+	<div class="container">
+		<div class="inner">
+			<div class="row">
+				<div class="col-lg-6" style="background-color: ghostwhite">
+					<div class="container">
+						<div class="container">
+							<br>
+							<h6 style="color: rgb(0, 0, 0);">Your security journey begins here</h6>
+						</div>
+						<br>
+						<div class="container">
+							<h2 style="color: red;">Talk to Us</h2>
+							<br>
+							<h5>Location</h5>
+							<br>
+							<p style="margin-left: 10px;"><i style="color:blue" class="icofont-google-map"></i>Office
+								PD46 M- Floor MD39 <br>
+								<spanc style="margin-left: 10px;">Gweru Main Post Office
+									Building Gweru</span>
+							</p>
+							<br>
+							<h5>Email Us</h5>
+							<br>
+							<p style="margin-left: 10px;"><i style="color:blue" class="fa fa-envelope"></i> <a
+									href="mailto:shieldguardzim@gmail.com">shieldguardzim@gmail.com</a>
+							</p>
+							<br>
+							<h5>Call Us</h5>
+							<br>
+							<p style="margin-left: 10px;"><i style="color: blue;" class="icofont icofont-ui-call"></i><a
+									href="tel:+26354222391">+26354222391</a></p>
+						</div>
+					</div>
+
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="col-lg-6">
+					<div class="contact-us-form">
+						<h2 style="color:red">Contact With Us</h2>
+						<p>If you have any questions please fell free to contact with us.</p>
+						<!-- Form -->
+						<form class="form" method="post" action="{% url 'protector:contact' %}"
+							enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										{{form.name}}
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										{{form.email}}
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										{{form.phone}}
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										{{form.subject}}
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="form-group">
+										{{form.message}}
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group login-btn">
+										<button class="btn" type="submit">Send</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--/ End Form -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact-info">
+			<div class="row">
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont icofont-ui-call"></i>
+						<div class="content">
+							<h3> <a href="tel:+26354222391">+26354222391</a></h3>
+							<p> <a href="mailto:shieldguardzim@gmail.com">shieldguardzim@gmail.com</a></p>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont-google-map"></i>
+						<div class="content">
+							<h3>Address</h3>
+							<p>Office PD46 M- Floor MD39 Gweru Main Post Office Building Gweru</p>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont icofont-wall-clock"></i>
+						<div class="content">
+							<h3>Mon - Sun: 24/7</h3>
+							<p>Every Day</p>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Contact Us -->
+
+</body>
+
+</html>
+
+<!-- end contact section -->
+
+{% endblock %}

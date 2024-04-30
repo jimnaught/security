@@ -1,0 +1,10 @@
+# .gitignore
+
+# Virtual environment
+venv/
+env/
+
+# Database file
+db.sqlite3
+
+# Other sensitive files (if any)
