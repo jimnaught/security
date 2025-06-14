@@ -40,3 +40,9 @@ The website serves as both a business platform for service management and an adv
 - Python 3.8+
 - pip
 - Virtualenv (recommended)
+
+  ## Contact
+For inquiries about my services or this project:
+- Email: jimnaught90@gmail.com
+- Website: (https://creativetech.onrender.com/)
+- LinkedIn: www.linkedin.com/in/jimnaughtmhlanga-196888276
